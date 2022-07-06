@@ -1,0 +1,587 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+/*resets*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a,p,h1,h2,h3,ul,li{
+    text-decoration: none;
+    list-style-type: none;
+    color:   hsl(233, 8%, 62%);
+}
+
+/*base styles*/
+body{
+    overflow-x: hidden;
+    font-family: 'Public Sans',sans-serif;
+}
+
+.easy-request-invite{
+    /*margin: 10px;*/
+}
+.easy-request-invite a{
+    padding: 8px 25px;
+    font-weight: 300;
+    font-size: 12px;
+    border-radius: 20px;
+    background: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+    mix-blend-mode: overlay;
+    color: hsl(0, 0%, 100%);
+}
+
+/*mobile styles 375px*/
+/*@media screen and (max-width: 375px){*/
+    header{
+        display: flex;
+        position: fixed;
+        width: 100%;
+        background-color: white;
+    }
+
+    header .easy-logo{
+        margin: 15px 100px 15px 15px;
+    }
+
+    header .easy-mobile-nav-icon{
+        display: flex;
+        flex-direction: row;
+        margin: 15px 0 15px 70px;
+    }
+
+    header .easy-mobile-nav-icon #close{
+        display: none;
+    }
+
+    header .easy-modal{
+        background-color: rgba(0,0,0,0.6);
+        display: none;
+        position: fixed;
+        top: 55px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    header .easy-modal.show-modal{
+        display: block;
+    }
+
+    header .easy-modal .easy-mobile-nav .easy-mobile-nav-content{
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        position: absolute;
+        top: 150px;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        width: 90%;
+        height: 250px;
+        animation-name: modalopen;
+        animation-duration: 2s;
+    }
+
+    header .easy-modal .easy-mobile-nav .easy-mobile-nav-content ul li{
+        text-align: center;
+    }
+
+    header .easy-modal .easy-mobile-nav .easy-mobile-nav-content ul li{
+        margin-top: 25px;
+        font-weight: 400;
+        font-size: 18px;
+        color: hsl(233, 26%, 24%);
+    }
+    header .easy-modal .easy-mobile-nav .easy-mobile-nav-content ul li a:hover{
+        color: hsl(136, 65%, 51%);
+    }
+
+    header .easy-desktop-nav{
+        display: none;
+    }
+    header .easy-request-invite{
+        display: none;
+    }
+
+    @keyframes modalopen{
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    /*section easy content styles*/
+
+    .easy-content{
+        background:hsl(0, 0%, 98%) url("images/bg-intro-mobile.svg") no-repeat center center/ cover;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .easy-content .easy-content-image img{
+        width: 350px;
+        object-fit: cover;
+        margin: -65px 0 0 10px;
+    }
+    .easy-content .easy-content-image-1{
+        display: none;
+    }
+
+    .easy-content .easy-content-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 20px 60px 20px;
+    }
+
+    .easy-content .easy-content-text h1{
+        font-weight: 600;
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .easy-content .easy-content-text p{
+        font-weight: 400;
+        font-size: 0.8em;
+        text-align: center;
+        padding: 0 15px;
+        margin-bottom: 15px;
+    }
+
+    .easy-content .easy-content-text .easy-request-invite{
+        z-index: 100;
+    }
+
+    /*section easy choice styles*/
+    .easy-choice{
+        display: flex;
+        flex-direction: column;
+        padding: 50px 15px 20px 15px;
+        background: hsl(220, 16%, 96%);
+    }
+    .easy-choice .easy-choice-header{
+        margin: 0 0 40px 0;
+       text-align: center;
+    }
+    .easy-choice .easy-choice-header h1{
+        padding: 0 20px;
+        font-weight: 600;
+        font-size: 1.8em;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .easy-choice .easy-choice-header p{
+        font-weight: 400;
+        font-size: 0.8em;
+        text-align: center;
+        padding: 0 15px;
+        margin-bottom: 15px;
+    }
+
+    .easy-choice .easy-choice-content .easy-choice-content-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .easy-choice .easy-choice-content .easy-choice-content-text img{
+        width: 60px;
+        margin-bottom: 20px;
+    }
+    .easy-choice .easy-choice-content .easy-choice-content-text h2{
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .easy-choice .easy-choice-content .easy-choice-content-text p{
+        font-weight: 400;
+        font-size: 0.8em;
+        text-align: center;
+        padding: 0 15px;
+        margin-bottom: 15px;
+    }
+
+    /*section easy articles styles */
+    .easy-articles{
+        background-color: hsl(0, 0%, 98%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 20px;
+    }
+
+    .easy-articles h1{
+        font-weight: 600;
+        text-align: center;
+        font-size: 2em;
+        margin: 40px 0 30px 0;
+    }
+
+    .easy-articles .easy-articles-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .easy-articles .easy-articles-content .easy-articles-text{
+        background-color: white;
+        border-radius: 10px;
+        margin-bottom: 30px;
+    }
+
+    .easy-articles .easy-articles-content .easy-articles-text img{
+        border-radius: 10px 10px 0 0;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .easy-articles .easy-articles-content .easy-articles-text .easy-articles-arthur{
+        padding: 0 0 10px 30px;
+        font-weight: 300;
+        font-size: 0.7em;
+    }
+
+    .easy-articles .easy-articles-content .easy-articles-text a h3{
+        padding: 0 15px 10px 30px;
+        font-weight: 400;
+        font-size: 1.05em;
+        color: hsl(233, 26%, 24%);
+    }
+    .easy-articles .easy-articles-content .easy-articles-text a h3:hover{
+        color: hsl(136, 65%, 51%);
+    }
+
+    .easy-articles .easy-articles-content .easy-articles-text p{
+        padding: 0 15px 50px 30px;
+        font-weight: 300;
+        font-size: 0.8em;
+        color: hsl(233, 26%, 24%);
+    }
+
+    /*footer styles*/
+    footer{
+        background-color: hsl(233, 26%, 24%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 30px 0;
+    }
+    footer .easy-footer-content .easy-footer-logo img{
+        margin-bottom: 20px;
+    }
+
+    footer .easy-footer-content .easy-social-media {
+        margin-bottom: 10px;
+    }
+    footer .easy-footer-content .easy-social-media a img{
+        padding: 0 5px 0 5px;
+    }
+
+    footer .easy-footer-content .easy-footer-text{
+        margin-bottom: 15px;
+    }
+    footer .easy-footer-content .easy-footer-text .easy-footer-text-column1 a p{
+        margin-bottom: 15px;
+        color: white;
+        font-weight: 400;
+        font-size: 0.8em;
+    }
+    footer .easy-footer-content .easy-footer-text .easy-footer-text-column1 a p:hover{
+        color: hsl(136, 65%, 51%);
+    }
+
+    footer .easy-footer-copyrights{
+        display: flex;
+        flex-direction: column;
+    }
+    footer .easy-footer-copyrights .easy-request-invite{
+        z-index: 100;
+        margin-bottom: 20px;
+    }
+    footer .easy-footer-copyrights .easy-footer-copyrights-text{
+        font-weight: 400;
+        font-size:0.8em;
+    }
+/*}*/
+
+/*desktop styles 1300px*/
+@media screen and (min-width: 1200px){
+
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        padding: 20px 150px;
+        background-color: white;
+    }
+
+    header .easy-logo{
+        /*margin: 15px 0 15px 150px;*/
+    }
+
+    header .easy-mobile-nav-icon{
+        display: none;
+    }
+
+    header .easy-desktop-nav{
+        display: flex;
+        /*margin-left: 18%;*/
+        /*width: 300px;*/
+        padding: 0;
+    }
+    header .easy-desktop-nav ul{
+        display: flex;
+        align-items: center;
+    }
+    header .easy-desktop-nav ul li{
+        margin: 0 15px ;
+    }
+
+    header .easy-desktop-nav ul li a{
+        padding-bottom: 10px;
+    }
+    header .easy-desktop-nav ul li a:hover{
+        border-bottom: 3px solid hsl(136, 65%, 51%);;
+    }
+
+    header .easy-request-invite{
+        display: flex;
+        z-index: 100;
+        margin-top: 2px;
+        padding: 8px 25px;
+    }
+
+    /*section easy content styles*/
+
+    .easy-content{
+        background-image: url("./images/bg-intro-desktop.svg") ;
+        background-size: 750px;
+        background-position: right;
+        margin-bottom: -100px;
+        margin-right: -150px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        overflow: hidden;
+    }
+
+    .easy-content .easy-content-image{
+      display: none;
+    }
+    .easy-content .easy-content-image-1{
+        display: block;
+    }
+
+    .easy-content .easy-content-image-1 img{
+        width: 600px;
+        margin-top: -80px;
+        margin-right: -100px;
+    }
+
+    .easy-content .easy-content-text{
+        max-width: 500px;
+        margin-right: 100px;
+    }
+
+    .easy-content .easy-content-text h1{
+        font-weight: 600;
+        font-size: 2.4em;
+        text-align: start;
+        margin: 0 100px 15px 0;
+        color: hsl(233, 26%, 24%);
+    }
+    .easy-content .easy-content-text p{
+        font-weight: 400;
+        font-size: 0.8em;
+        text-align: start;
+        padding: 0 100px 15px 0;
+    }
+
+    .easy-content .easy-content-text .easy-request-invite{
+        width: 100%;
+        z-index: 100;
+        text-align: start;
+    }
+
+
+    /*section easy choice styles*/
+    .easy-choice{
+        display: flex;
+        flex-direction: column;
+        padding: 50px 50px 20px 15px;
+        background: hsl(220, 16%, 96%);
+
+    }
+    .easy-choice .easy-choice-header{
+        margin: 0 0 50px 120px;
+        text-align: start;
+    }
+    .easy-choice .easy-choice-header h1{
+        padding: 0 10px 0 0;
+        font-weight: 600;
+        font-size: 1.8em;
+        text-align: start;
+        margin-bottom: 10px;
+        color: hsl(233, 26%, 24%);
+    }
+    .easy-choice .easy-choice-header p{
+        width: 45%;
+        font-weight: 400;
+        font-size: 0.8em;
+        text-align: start;
+        padding: 0 0;
+        margin-bottom: 15px;
+    }
+
+    .easy-choice .easy-choice-content{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-left: 120px;
+    }
+
+    .easy-choice .easy-choice-content .easy-choice-content-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: start;
+    }
+
+    .easy-choice .easy-choice-content .easy-choice-content-text img{
+        width: 50px;
+        margin-bottom: 25px;
+    }
+    .easy-choice .easy-choice-content .easy-choice-content-text h2{
+        font-weight: 600;
+        text-align: start;
+        margin-bottom: 20px;
+    }
+    .easy-choice .easy-choice-content .easy-choice-content-text p{
+        font-weight: 400;
+        font-size: 0.8em;
+        text-align:start;
+        padding: 0 40px 0 0;
+        margin-bottom: 15px;
+    }
+
+
+    /*section easy articles styles */
+    .easy-articles{
+        justify-content: flex-start;
+        align-items: start;
+        padding: 30px 20px 50px 20px;
+    }
+
+    .easy-articles h1{
+        color: hsl(233, 26%, 24%);
+        margin-left: 115px;
+    }
+
+    .easy-articles .easy-articles-content{
+        display: flex;
+        flex-direction: row;
+        margin: 0 70px 0 115px;
+    }
+
+    .easy-articles .easy-articles-content .easy-articles-text{
+        margin: 0 15px 0 0;
+    }
+
+    .easy-articles .easy-articles-content .easy-articles-text img{
+        height: 200px;
+    }
+
+    .easy-articles .easy-articles-content .easy-articles-text .easy-articles-arthur{
+       color: hsl(233, 8%, 62%);
+    }
+
+    .easy-articles .easy-articles-content .easy-articles-text a h3{
+        color: hsl(233, 26%, 24%)
+    }
+    .easy-articles .easy-articles-content .easy-articles-text a h3:hover{
+        color: hsl(136, 65%, 51%);
+    }
+
+    .easy-articles .easy-articles-content .easy-articles-text p{
+        color: hsl(233, 8%, 62%);
+    }
+
+
+    /*footer styles*/
+    footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: center;
+        padding: 30px 130px;
+    }
+
+    footer .easy-footer-content .easy-footer-logos{
+        display: flex;
+        flex-direction: column;
+        height: 80px;
+        justify-content: space-between;
+
+    }
+
+    footer .easy-footer-content .easy-footer-logo img{
+        margin-bottom: 20px;
+        margin-left: -20px;
+    }
+
+    footer .easy-footer-content .easy-social-media {
+        margin-bottom: 0;
+    }
+    footer .easy-footer-content .easy-social-media a img{
+        padding: 0 5px 0 5px;
+    }
+
+    footer .easy-footer-content{
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer .easy-footer-content .easy-footer-text{
+        display: flex;
+        width: 250px;
+        margin-top: 20px;
+    }
+    footer .easy-footer-content .easy-footer-text .easy-footer-text-column1 a p{
+        text-align: start;
+        margin: 0 50px 0 0;
+        height: 29px;
+    }
+    footer .easy-footer-content .easy-footer-text .easy-footer-text-column1 a p:hover{
+        color: hsl(136, 65%, 51%);
+    }
+
+    footer .easy-footer-copyrights{
+        display: flex;
+        flex-direction: column;
+    }
+    footer .easy-footer-copyrights .easy-request-invite{
+        z-index: 100;
+        margin-top: 25px;
+        margin-bottom: 40px;
+    }
+    footer .easy-footer-copyrights .easy-footer-copyrights-text{
+        font-weight: 400;
+        font-size:0.8em;
+    }
+
+
+
+
+
+}
+
