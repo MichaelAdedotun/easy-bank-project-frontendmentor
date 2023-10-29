@@ -273,30 +273,31 @@ body{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         text-align: center;
         padding: 30px 0;
     }
-    footer .easy-footer-content .easy-footer-logo img{
+    footer .easy-footer-logo img{
         margin-bottom: 20px;
     }
 
-    footer .easy-footer-content .easy-social-media {
+    footer .easy-social-media {
         margin-bottom: 10px;
     }
-    footer .easy-footer-content .easy-social-media a img{
+    footer .easy-social-media a img{
         padding: 0 5px 0 5px;
     }
 
-    footer .easy-footer-content .easy-footer-text{
+    footer .easy-footer-text{
         margin-bottom: 15px;
     }
-    footer .easy-footer-content .easy-footer-text .easy-footer-text-column1 a p{
+    footer .easy-footer-text .easy-footer-text-column1 a p{
         margin-bottom: 15px;
         color: white;
         font-weight: 400;
         font-size: 0.8em;
     }
-    footer .easy-footer-content .easy-footer-text .easy-footer-text-column1 a p:hover{
+    footer .easy-footer-text .easy-footer-text-column1 a p:hover{
         color: hsl(136, 65%, 51%);
     }
 
@@ -312,10 +313,10 @@ body{
         font-weight: 400;
         font-size:0.8em;
     }
-/*}*/
 
-/*desktop styles 1300px*/
-@media screen and (min-width: 1200px){
+
+/*desktop styles 800px*/
+@media screen and (min-width: 800px){
 
     header{
         display: flex;
@@ -326,18 +327,12 @@ body{
         background-color: white;
     }
 
-    header .easy-logo{
-        /*margin: 15px 0 15px 150px;*/
-    }
-
     header .easy-mobile-nav-icon{
         display: none;
     }
 
     header .easy-desktop-nav{
         display: flex;
-        /*margin-left: 18%;*/
-        /*width: 300px;*/
         padding: 0;
     }
     header .easy-desktop-nav ul{
@@ -527,7 +522,7 @@ body{
         padding: 30px 130px;
     }
 
-    footer .easy-footer-content .easy-footer-logos{
+    footer .easy-footer-logos{
         display: flex;
         flex-direction: column;
         height: 80px;
@@ -535,36 +530,30 @@ body{
 
     }
 
-    footer .easy-footer-content .easy-footer-logo img{
+    footer .easy-footer-logo img{
         margin-bottom: 20px;
         margin-left: -20px;
     }
 
-    footer .easy-footer-content .easy-social-media {
+    footer .easy-social-media {
         margin-bottom: 0;
     }
-    footer .easy-footer-content .easy-social-media a img{
+    footer .easy-social-media a img{
         padding: 0 5px 0 5px;
     }
 
-    footer .easy-footer-content{
-        width: 50%;
+    footer .easy-footer-text{
         display: flex;
         justify-content: space-between;
-        align-items: center;
-    }
-
-    footer .easy-footer-content .easy-footer-text{
-        display: flex;
-        width: 250px;
+        width: 30%;
         margin-top: 20px;
     }
-    footer .easy-footer-content .easy-footer-text .easy-footer-text-column1 a p{
+    footer .easy-footer-text .easy-footer-text-column1 a p{
         text-align: start;
         margin: 0 50px 0 0;
         height: 29px;
     }
-    footer .easy-footer-content .easy-footer-text .easy-footer-text-column1 a p:hover{
+    footer .easy-footer-text .easy-footer-text-column1 a p:hover{
         color: hsl(136, 65%, 51%);
     }
 
@@ -574,7 +563,6 @@ body{
     }
     footer .easy-footer-copyrights .easy-request-invite{
         z-index: 100;
-        margin-top: 25px;
         margin-bottom: 40px;
     }
     footer .easy-footer-copyrights .easy-footer-copyrights-text{
